@@ -1,5 +1,7 @@
 FROM golang:1.23
 WORKDIR /app
+RUN uname -a
+RUN ping google.com -n 4
 COPY go.mod go.sum ./
 RUN go mod download
 
